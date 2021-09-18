@@ -1,15 +1,15 @@
 import cv2
 import cvui
 
+ip=""
 
-
-rtsp_username = "admin"
-rtsp_password = "qqq@12345"
+rtsp_username = ""
+rtsp_password = ""
 width = 800
 height = 480
 cam_no = 1
 def create_camera (channel):
-    rtsp = "rtsp://" + rtsp_username + ":" + rtsp_password + "@192.168.1.100:554/Streaming/channels/" + channel + "02" #change the IP to suit yours
+    rtsp = "rtsp://" + rtsp_username + ":" + rtsp_password + "@"+ip+":554/Streaming/channels/" + channel + "02" #change the IP to suit yours
     cap = cv2.VideoCapture()
     cap.open(rtsp)
     cap.set(3, 640)  # ID number for width is 3
